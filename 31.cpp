@@ -77,8 +77,15 @@ istream& operator >> (istream& os, Point4D& p) {
 
 
 int main() {
-	Point4D p;
-	cin >> p;
-	cout << "Koordinate tocke: (" << p.m_x << ", " << p.m_y << ", " << p.m_z << ", " << p.getT() << ")" << endl;
+	Point4D p1, p2;
+	cin >> p1;
+	cin >> p2;
+	cout << "Koordinate tocke: (" << p1.m_x << ", " << p1.m_y << ", " << p1.m_z << ", " << p1.getT() << ")" << endl;
+	cout << "Koordinate tocke: (" << p2.m_x << ", " << p2.m_y << ", " << p2.m_z << ", " << p2.getT() << ")" << endl;
+	if (p1 != p2)
+		cout << "Nisu iste!" << endl;
+	else
+		cout << "Iste su!" << endl;
 	return 0;
 }
+
