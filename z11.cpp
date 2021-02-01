@@ -57,13 +57,15 @@ istream& operator >> (istream& in, Razlomak& raz) {
 }
 
 int main() {
-	Razlomak raz1, raz2;
+	Razlomak *raz1, *raz2;
+	raz1 = new Razlomak;
+	raz2 = new Razlomak;
 
-	cin >> raz1;
-	cin >> raz2;
-	cout << raz1.m_brojnik << "/" << raz1.GetNazivnik() << endl;
-	cout << raz2.m_brojnik << "/" << raz2.GetNazivnik() << endl;
-	cout << "Je li " << raz1.m_brojnik << "/" << raz1.GetNazivnik() << " veci od " << raz2.m_brojnik << "/" << raz2.GetNazivnik() << "?" << endl;
+	cin >> *raz1;
+	cin >> *raz2;
+	cout << raz1->m_brojnik << "/" << raz1->GetNazivnik() << endl;
+	cout << raz2->m_brojnik << "/" << raz2->GetNazivnik() << endl;
+	cout << "Je li " << raz1->m_brojnik << "/" << raz1->GetNazivnik() << " veci od " << raz2->m_brojnik << "/" << raz2->GetNazivnik() << "?" << endl;
 	cout << (raz1 > raz2) << endl;
 	return 0;
 }
